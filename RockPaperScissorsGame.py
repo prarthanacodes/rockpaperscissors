@@ -16,13 +16,14 @@ def invalid_user_input(user_choice):
         print("Invalid response.")
         user_choice = input("Rock, Paper, or Scissors? (r/p/s) ").lower()
         # This one works as expected
+    return user_choice
 
 
 def draws(draw):
     if draw == True:
         print("It was a draw!\nGo again!")
         draw_computer_choice = computer_choice_list[random.randint(0, 2)]
-        user_draw_input = input("Rock, paper, or scissors? (r/p/s) ")
+        user_draw_input = input("Rock, paper, or scissors? (r/p/s) ").lower()
         invalid_user_input(user_draw_input)
         determining_round_wins(user_draw_input, draw_computer_choice)
 
@@ -77,7 +78,7 @@ computer_choice_3 = computer_choice_list[random.randint(0, 2)]
 
 # Round 1
 user_choice_1 = input("Rock, Paper or Scissors? (r/p/s) ").lower()
-invalid_user_input(user_choice_1)
+user_choice_1 = invalid_user_input(user_choice_1)
 win_or_lose = determining_round_wins(user_choice_1, computer_choice_1)
 if win_or_lose == 1:
     score += 1
@@ -86,7 +87,7 @@ print(f"Your current score is: {score}")
 
 # Round 2
 user_choice_2 = input("Rock, Paper or Scissors? (r/p/s) ").lower()
-invalid_user_input(user_choice_2)
+user_choice_2 = invalid_user_input(user_choice_2)
 win_or_lose = determining_round_wins(user_choice_2, computer_choice_2)
 if win_or_lose == 1:
     score += 1
@@ -95,7 +96,7 @@ print(f"Your current score is: {score}")
 
 # Round 3
 user_choice_3 = input("Rock, Paper or Scissors? (r/p/s) ").lower()
-invalid_user_input(user_choice_3)
+user_choice_3 = invalid_user_input(user_choice_3)
 win_or_lose = determining_round_wins(user_choice_3, computer_choice_3)
 if win_or_lose == 1:
     score += 1
