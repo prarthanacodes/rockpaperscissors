@@ -14,7 +14,7 @@ computer_choice_list = ["r", "p", "s"]
 def invalid_user_input(user_choice):
     while user_choice != "r" and user_choice != "p" and user_choice != "s":
         print("Invalid response.")
-        user_choice = input("Rock, Paper, or Scissors? (r/p/s) ")
+        user_choice = input("Rock, Paper, or Scissors? (r/p/s) ").lower()
         # This one works as expected
 
 
